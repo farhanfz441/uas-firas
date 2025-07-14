@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerakan Sholat - Muhammadiyah</title>
+  <style>
+    :root {
+      --primary: #14532d;
+      --primary-dark: #0c3b1f;
+      --white: #ffffff;
+      --bg: #f0fdf4;
+      --hover: #d1fae5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    nav {
+      width: 220px;
+      background-color: #e7f5ec;
+      padding: 1rem;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin-bottom: 0.75rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #14532d;
+      font-weight: 600;
+      display: block;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: var(--hover);
+    }
+
+    nav a.active {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: none;
+      flex-grow: 1;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    .step img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 8px;
+    }
+
+    .arab {
+      font-size: 26px;
+      direction: rtl;
+      text-align: right;
+      color: var(--primary);
+    }
+
+    .latin, .arti {
+      margin-top: 0.5rem;
+      font-size: 16px;
+    }
+
+    audio {
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .back-button {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .back-button a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: var(--primary-dark);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+      }
+
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Gerakan dan Bacaan Sholat - Muhammadiyah</h1>
+</header>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <nav>
+    <ul>
+      <li><a class="tab-link active" data-target="takbir">Takbir</a></li>
+      <li><a class="tab-link" data-target="iftitah">Doa Iftitah</a></li>
+      <li><a class="tab-link" data-target="rukuk">Rukuk</a></li>
+      <li><a class="tab-link" data-target="itidal">I'tidal</a></li>
+      <li><a class="tab-link" data-target="sujud">Sujud</a></li>
+      <li><a class="tab-link" data-target="duduk">Duduk Dua Sujud</a></li>
+      <li><a class="tab-link" data-target="tasyahud-awal">Tasyahud Awal</a></li>
+      <li><a class="tab-link" data-target="tasyahud-akhir">Tasyahud Akhir</a></li>
+      <li><a class="tab-link" data-target="salam">Salam</a></li>
+    </ul>
+  </nav>
+
+  <!-- Konten -->
+  <main>
+
+    <!-- Setiap gerakan -->
+    <div id="Takbir" class="step active">
+      <h2>Takbiratul Ihram</h2>
+      <img src="Takbir.jpg" alt="Takbir">
+      <p class="arab">اللّٰهُ أَكْبَرُ</p>
+      <p class="latin">Allahu Akbar</p>
+      <p class="arti"><em>Allah Maha Besar</em></p>
+    </div>
+
+    <div id="iftitah" class="step">
+      <h2>Doa Iftitah</h2>
+      <img src="Iftitah.jpg" alt="Doa Iftitah">
+      <p class="arab">اللّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ،  
+اللّهُمَّ نَقِّنِي مِنْ خَطَايَايَ كَمَا يُنَقَّى الثَّوْبُ الْأَبْيَضُ مِنَ الدَّنَسِ،  
+اللّهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ بِالثَّلْجِ وَالْمَاءِ وَالْبَرَدِ
+..</p>
+      <p class="latin">Allāhumma bā‘id baynī wa baina khaṭāyāya,
+kamā bā‘adta baina al-masyriqi wa al-maghrib.
+Allāhumma naqqinī min khaṭāyāya,
+kamā yunaqqā ath-thawbu al-abyaḍu mina ad-danas.
+Allāhumma aghsilnī min khaṭāyāya,
+bi ath-thalji wa al-mā’i wa al-barad....</p>
+      <p class="arti"><em>"Ya Allah, jauhkanlah antara aku dan kesalahan-kesalahanku,
+sebagaimana Engkau menjauhkan antara timur dan barat.
+Ya Allah, sucikanlah aku dari kesalahan-kesalahanku
+sebagaimana pakaian putih disucikan dari kotoran.
+Ya Allah, cucilah aku dari kesalahan-kesalahanku
+dengan air, salju, dan embun."...</em></p>
+    </div>
+
+    <div id="rukuk" class="step">
+      <h2>Rukuk</h2>
+      <img src="Rukuk.jpg" alt="Rukuk">
+      <p class="arab">سُبْحَانَ رَبِّيَ الْعَظِيمِ</p>
+      <p class="latin">Subḥāna rabbiyal ‘aẓīm</p>
+      <p class="arti"><em>Maha Suci Tuhanku Yang Maha Agung</em></p>
+    </div>
+
+    <div id="itidal" class="step">
+      <h2>I'tidal</h2>
+      <img src="Niat.jpg" alt="I'tidal">
+      <p class="arab">سَمِعَ اللّٰهُ لِمَنْ حَمِدَهُ<br>رَبَّنَا وَلَكَ الْحَمْدُ</p>
+      <p class="latin">Sami’allāhu liman ḥamidah. Rabbana wa lakal ḥamd</p>
+      <p class="arti"><em>Allah mendengar orang yang memuji-Nya...</em></p>
+    </div>
+
+    <div id="sujud" class="step">
+      <h2>Sujud</h2>
+      <img src="Sujud.jpg" alt="Sujud">
+      <p class="arab">سُبْحَانَ رَبِّيَ الأَعْلَى</p>
+      <p class="latin">Subḥāna rabbiyal a‘lā</p>
+      <p class="arti"><em>Maha Suci Tuhanku Yang Maha Tinggi</em></p>
+    </div>
+
+    <div id="duduk" class="step">
+      <h2>Duduk antara Dua Sujud</h2>
+      <img src="Duduk.jpg" alt="Duduk Dua Sujud">
+      <p class="arab">اللَّهُمَّ اغْفِرْ لِي، وَارْحَمْنِي، وَاجْبُرْنِي...</p>
+      <p class="latin">Allāhumma ighfir lī, warḥamnī...</p>
+      <p class="arti"><em>Ya Allah, ampunilah aku, rahmatilah aku...</em></p>
+    </div>
+
+    <div id="tasyahud-awal" class="step">
+      <h2>Tasyahud Awal</h2>
+      <img src="Duduk.jpg" alt="Tasyahud Awal">
+      <p class="arab">التَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللّٰهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ.
+..</p>
+      <p class="latin">At-taḥiyyātu lillāhi waṣ-ṣalawātu waṭ-ṭayyibāt,
+as-salāmu ‘alaika ayyuhan-nabiyyu wa raḥmatullāhi wa barakātuh,
+as-salāmu ‘alainā wa ‘alā ‘ibādillāhiṣ-ṣāliḥīn.
+Asyhadu allā ilāha illallāh, wa asyhadu anna Muḥammadan rasūlullāh....</p>
+      <p class="arti"><em>"Segala kehormatan, keberkahan, dan kebaikan adalah milik Allah.
+Semoga keselamatan tercurah kepadamu wahai Nabi, beserta rahmat Allah dan berkah-Nya.
+Semoga keselamatan juga tercurah kepada kami dan hamba-hamba Allah yang shalih.
+Aku bersaksi bahwa tidak ada Tuhan selain Allah, dan aku bersaksi bahwa Muhammad adalah utusan Allah."...</em></p>
+    </div>
+
+    <div id="tasyahud-akhir" class="step">
+      <h2>Tasyahud Akhir</h2>
+      <img src="Akhir.png" alt="Tasyahud Akhir">
+      <p class="arab">التَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللّٰهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ.
+
+اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ. وَبَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ.
+..</p>
+      <p class="latin">At-taḥiyyātu lillāhi waṣ-ṣalawātu waṭ-ṭayyibātu, as-salāmu ‘alaika ayyuhan-nabiyyu wa raḥmatullāhi wa barakātuh,
+as-salāmu ‘alainā wa ‘alā ‘ibādillāhiṣ-ṣāliḥīn.
+Asyhadu allā ilāha illallāh, wa asyhadu anna Muḥammadan rasūlullāh.
+Allāhumma ṣalli ‘alā Muḥammad wa ‘alā āli Muḥammad,
+kamā ṣallaita ‘alā Ibrāhīma wa ‘alā āli Ibrāhīm, innaka ḥamīdun majīd.
+Wa bārik ‘alā Muḥammad wa ‘alā āli Muḥammad,
+kamā bārakta ‘alā Ibrāhīma wa ‘alā āli Ibrāhīm, innaka ḥamīdun majīd....</p>
+      <p class="arti"><em>"Segala penghormatan, keberkahan, dan kebaikan adalah milik Allah.
+Semoga keselamatan atasmu wahai Nabi, beserta rahmat Allah dan keberkahan-Nya.
+Semoga keselamatan dilimpahkan atas kami dan atas hamba-hamba Allah yang saleh.
+Aku bersaksi bahwa tidak ada Tuhan selain Allah, dan aku bersaksi bahwa Muhammad adalah utusan Allah.
+Ya Allah, limpahkanlah shalawat kepada Muhammad dan keluarga Muhammad,
+sebagaimana Engkau telah melimpahkan shalawat kepada Ibrahim dan keluarga Ibrahim.
+Sesungguhnya Engkau Maha Terpuji lagi Maha Mulia.
+Dan limpahkanlah keberkahan kepada Muhammad dan keluarga Muhammad,
+sebagaimana Engkau telah memberkahi Ibrahim dan keluarga Ibrahim.
+Sesungguhnya Engkau Maha Terpuji lagi Maha Mulia."...</em></p>
+    </div>
+
+    <div id="salam" class="step">
+      <h2>Salam</h2>
+      <img src="Salam.jpg" alt="Salam">
+      <p class="arab">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ</p>
+      <p class="latin">Assalāmu ‘alaikum wa raḥmatullāh</p>
+      <p class="arti"><em>Semoga keselamatan dan rahmat Allah tercurah atasmu</em></p>
+    </div>
+
+    <!-- Tombol di bawah tengah -->
+    <div class="back-button">
+  <a href="Beranda.html">⬅️ Kembali ke Beranda</a>
+</div>
+
+
+  </main>
+</div>
+
+<script>
+  const links = document.querySelectorAll('.tab-link');
+  const steps = document.querySelectorAll('.step');
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      // Remove all active
+      links.forEach(l => l.classList.remove('active'));
+      steps.forEach(s => s.classList.remove('active'));
+
+      // Activate current
+      link.classList.add('active');
+      const target = document.getElementById(link.dataset.target);
+      if (target) target.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
